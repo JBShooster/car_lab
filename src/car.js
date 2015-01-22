@@ -27,30 +27,32 @@ Car.prototype.off = function(state){
 	this.state = "off";
 };
 
-Car.prototype.pick_up =function(people){
-	if (this.state == "on"){
-		this.passengers.push(people);
+Car.prototype.pick_up =function(person){
+	if (this.state === "on"){
+		this.passengers.push(person);
 	}
 };
 
 Car.prototype.driveTo =function(destination){
-	if (this.state == "on"){
+	if (this.state === "on"){
 		console.log("Driving to " + desination);
 	}
 };
 
 Car.prototype.park = function(){
-	if (this.state== "off"){
+	if (this.state=== "off"){
 		console.log("Parked");
 	}
 };
 
-Car.prototype.dropOff =function(people){
-	if (this.state == "on"){
-		this.passengers.splice(people);
+Car.prototype.dropOff =function(person){
+	if (this.state === "on"){
+		if(this.passengers.indexOf(person) != -1){
+		this.passengers.splice(this.passengers.indexOf(person), 1);
+		}	
 	}
 	else{
-		return("Are you crazy? You can only throw " + people + "out while the car is on. That's how the test was written.");
+		return("Are you crazy? You can only throw " + person + " out while the car is on. That's how the test was written.");
 	}
 };
 
