@@ -35,6 +35,18 @@ Car.prototype.pick_up =function(people){
 	}
 };
 
+Car.prototype.driveTo =function(destination){
+	if (this.state == "on"){
+		console.log("Driving to " + desination);
+	}
+};
+
+Car.prototype.park = function(){
+	if (this.state== "off"){
+		console.log("Parked");
+	}
+};
+
 Car.prototype.dropOff =function(people){
 	if (this.state == "on"){
 		this.passengers.splice(people);
