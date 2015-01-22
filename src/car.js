@@ -1,11 +1,9 @@
 //This is where we define our Car object. 
-function Car(make, model, year, color, state, current_owner, previous_owners, passengers){
+function Car(make, model, color){
 	this.make = make;
 	this.model = model;
-	this.year = year;
+	this.year = new Date().getFullYear();
 	this.color = color;
-	this.state = state;
-	this.current_owner=  current_owner;
 	this.state = "off";
 	this.current_owner = "Manufacturer";
 	this.previous_owners = [];

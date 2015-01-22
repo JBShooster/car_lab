@@ -13,7 +13,7 @@ describe('Car', function(){
 
   describe('#year', function(){
     it('should be the current year', function(){
-      expect(myCar.year).to.equal(2014);
+      expect(myCar.year).to.equal(2015);
     });
   });
 
